@@ -1,0 +1,65 @@
+ul{
+    list-style-type: none;
+}
+.list{
+    margin-top: 28px;
+}
+header{
+    text-align: center;
+    padding: 6%;
+    background-image: url("");
+}
+span:first-child{
+    color: white;
+}
+span:nth-child(2)
+{
+    color:#48dde3;
+}
+header p{
+    padding-top:1% ;
+    color: white;
+}
+.container{
+    margin:6%;
+}
+
+h1{
+    color:#00BBD8;
+}
+.btn-info{
+    margin-left:1% ;
+}
+.profile_pic{
+    margin-right:-48px;
+}
+.me{
+    margin-bottom: 11%;
+    margin-top: 10%;
+    margin-right: 20%;
+    color:#FF69B4;
+}
+img{
+    height:23rem;
+}
+.fa{
+    text-decoration: none;
+}
+.icons a{
+    color: #31D2F2;
+    border-style: solid;
+    margin-right: 9px;
+    margin-top: 10px;
+    border-radius: 50px;
+    width: 40px;
+    font-size: 20px;
+    height: 40px;
+    padding: 8px;
+}
+.p {
+  font-family: "Times New Roman", Times, serif;
+
+}
+.bb{
+    color: #FF6347;
+}

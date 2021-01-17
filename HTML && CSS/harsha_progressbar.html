@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Progress bar</title>
+        <style>
+            div{
+                border-radius: 50px;
+                border-color: #7872db75;
+                border-style: groove;
+                padding: 4px;
+                width:200px;
+                height:20px;
+                margin-left: 2%;
+                margin-top:2%;
+                position: relative;
+                overflow: hidden;
+            }
+            .progressbar{
+                border-radius: 50px;
+                animation-name:progress ;
+                animation-duration: 20s;
+                animation-iteration-count: infinite;
+                display: block;
+                height: 100%;
+                
+                background: repeating-linear-gradient(
+                    45deg,
+                    #606dbc,
+                    #606dbc 10px,
+                    #465298 10px,
+                    #465298 20px
+                );
+            }
+            @keyframes progress{
+                0%{ width: 0%; }
+                25%{ width:75%; }
+                50%{ width: 100%; }
+                75%{ width:50%; }
+                100%{ width: 0%; }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <span class="progressbar"></span>
+        </div>
+    </body>
+</html>

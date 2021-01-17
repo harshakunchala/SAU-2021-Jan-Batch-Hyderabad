@@ -1,0 +1,37 @@
+.profile img{
+    height: 210px;
+}
+.profile{
+    text-align: center;
+}
+.middle{
+    border-style: outset;
+    border-color: #efebe4;
+    padding: 1rem;
+}
+body{
+    width: 27rem;
+}
+header{
+    text-align: center;
+    margin-top: 2rem;
+}
+.txtbox{
+    width: 25rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.section{
+    padding-top: 1rem;
+}
+.forgot{
+    margin-left: 208px;
+}
+footer{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #e9e3e39e;
+}
+.btn-danger{
+    margin-left: 13px;
+}
