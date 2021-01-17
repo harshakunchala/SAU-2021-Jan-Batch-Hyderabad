@@ -1,0 +1,31 @@
+.container-md
+{
+    margin-top: 10%;
+    position:relative;
+    text-align: center;
+    width: 35%;
+    border: 2px solid black;
+}
+.alertContainer
+{
+    margin-top: 10px;
+}
+.select1
+{
+    margin: 10px;
+    width: 500px;
+    display: inline-flex;
+    float: left;
+}
+.select2    
+{
+    margin: 10px;
+    width: 500px;
+    display: inline-flex;
+    float: right;
+}
+.btn-outline-dark
+{
+    margin: 10px;
+    padding: 10px;
+}

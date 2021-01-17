@@ -1,0 +1,98 @@
+<app-navbar></app-navbar>
+
+<div class="container-md">
+
+  <div class="alertContainer">
+    <p *ngFor="let alert of alerts">
+      <ngb-alert [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+    </p>
+  </div>
+
+
+    <h1 class="display-4">Form - enter details</h1>
+    <form [formGroup] = "basicForm" (ngSubmit)="addUser()">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">first name</span>
+            </div>
+            <input type="text" class="form-control" formControlName = "firstName" name="firstName" placeholder="First Name">
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">second name</span>
+            </div>
+            <input type="text" class="form-control" formControlName = "lastName" name="lastName" placeholder="Last Name">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">e-mail address</span>
+            </div>
+            <input type="email" class="form-control" formControlName = "email" name="email" placeholder="E-mail">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">todays Date</span>
+            </div>
+            <input type="date" class="form-control" name="date" formControlName = "date">
+          </div>
+
+        <!-- <input type="text" formControlName = "firstName" name="firstName" placeholder="First Name">
+        <input type="text" formControlName = "lastName" name="lastName" placeholder="Last Name">
+        <input type="email" formControlName = "email" name="email" placeholder="E-mail">
+        <input type="date" name="date" formControlName = "date"> -->
+        
+    <div class="btn">
+        <input class="btn btn-outline-dark" type="submit" value="Add User">
+    </div>
+    </form>
+    <!-- <span class="input-group-text" id="basic-addon1"></span> -->
+    <!-- <div>
+        <input type="text"  class="inp"  placeholder="Result"   [(ngModel)] = "result" disabled>
+    </div> -->
+</div>
+<div>
+    <div class="container">
+        <!-- <h1 class="display-4">User Details</h1> -->
+        <!-- <div>
+            
+            </div> -->
+        <div>
+            <div class="select1"> 
+                <select class="form-control" [(ngModel)]="selectedCol" (change)="sortTable()">
+                    <option value="firstName" selected>First Name</option>
+                    <option value="lastName">Last Name</option>
+                    <option value="email">Email</option>
+                    <option value="date">Date</option>
+                    </select>
+            </div>
+            <div class="select2">
+                <select class="form-control" [(ngModel)]="selectedType" (change)="sortTable()">
+                    <option value="asc" selected>Ascending</option>
+                    <option value="desc">Descending</option>
+                    </select>
+            </div>
+        </div>
+        
+        <table class="table table-hover table-dark" id="userData">
+            <thead>
+                <tr>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr *ngFor="let d of storedData">
+                    <td>{{ d.firstName | lowercase }}</td>
+                    <td>{{ d.lastName | lowercase }}</td>
+                    <td>{{ d.email | lowercase }}</td>
+                    <td>{{ d.date | customDate }}</td>
+                </tr>
+            </tbody>
+        </table>    
+    </div>
+
+</div>

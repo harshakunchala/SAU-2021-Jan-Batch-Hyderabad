@@ -1,0 +1,32 @@
+<!-- <app-basic-form></app-basic-form> -->
+<app-navbar></app-navbar>
+<div class="container-md">
+
+    <h1 class="display-4">harsha Calculator</h1>
+
+      <div class="form-floating mb-3">
+        <span class="input-group-text" id="addon-wrapping">Enter the first number</span>
+        <input type="number" class="form-control" id="firstNumber" placeholder="First number" [(ngModel)] = "firstNumber">
+      </div>
+      <div class="form-floating mb-3">
+        <span class="input-group-text" id="addon-wrapping">Enter the second number</span>
+        <input type="number" class="form-control" id="secondNumber" placeholder="Second number" [(ngModel)] = "secondNumber">
+      </div>
+      <div class="form-floating mb-3">
+        <span class="input-group-text" id="addon-wrapping">Result</span>
+        <input type="number" class="form-control" id="result" placeholder="Result" [(ngModel)] = "result">
+      </div>
+
+
+                      <!-- Without Bootstrap -->
+      <!-- <input type="number"  class="inp"  placeholder="First number"   [(ngModel)] = "firstNumber">
+      <input type="number" class="inp"  placeholder="Second number" [(ngModel)] = "secondNumber">
+      <input type="number" class="inp"  placeholder="Result" [(ngModel)] = "result"> -->
+      
+      <div class="btn">
+        <button class="btn btn-outline-dark" (click)="addition()">+</button>
+        <button class="btn btn-outline-dark" (click)="subtract()">-</button>
+        <button class="btn btn-outline-dark" (click)="multiply()">*</button>
+        <button class="btn btn-outline-dark" (click)="divide()">/</button>
+      </div>
+  </div>
